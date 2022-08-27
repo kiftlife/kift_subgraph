@@ -1,6 +1,6 @@
-## The Graph API
+## Kift subgraph API
 
-We use the graph to index transaction events on the blockchain to a query-able api which helps do more powerful operations than the methods available on the contract itself. An example would be:
+We use The Graph to index transaction events on the blockchain to a query-able api which helps do more powerful operations than the methods available on the contract itself. An example would be:
 
 - find the nfts owned by a wallet address
 - check if nft has been revealed

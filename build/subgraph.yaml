@@ -13,29 +13,13 @@ dataSources:
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - Airdrop
-        - Approval
-        - ApprovalForAll
-        - LogReveal
-        - MintTreasury
-        - OwnershipTransferred
-        - Transfer
+        - Attribute
+        - Token
+        - User
       abis:
         - name: kiftables
           file: kiftables/abis/kiftables.json
       eventHandlers:
-        - event: Airdrop(indexed address,indexed uint256)
-          handler: handleAirdrop
-        - event: Approval(indexed address,indexed address,indexed uint256)
-          handler: handleApproval
-        - event: ApprovalForAll(indexed address,indexed address,bool)
-          handler: handleApprovalForAll
-        - event: LogReveal(indexed uint256)
-          handler: handleLogReveal
-        - event: MintTreasury()
-          handler: handleMintTreasury
-        - event: OwnershipTransferred(indexed address,indexed address)
-          handler: handleOwnershipTransferred
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
       file: kiftables/kiftables.wasm
