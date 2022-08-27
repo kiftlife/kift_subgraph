@@ -1,6 +1,6 @@
 specVersion: 0.0.4
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: kiftables
@@ -22,7 +22,7 @@ dataSources:
         - Transfer
       abis:
         - name: kiftables
-          file: ./abis/kiftables.json
+          file: kiftables/abis/kiftables.json
       eventHandlers:
         - event: Airdrop(indexed address,indexed uint256)
           handler: handleAirdrop
@@ -38,4 +38,4 @@ dataSources:
           handler: handleOwnershipTransferred
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
-      file: ./src/kiftables.ts
+      file: kiftables/kiftables.wasm
